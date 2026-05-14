@@ -22,10 +22,12 @@ interface WeekSummary {
 
 function getMemberWeeks(name: string): WeekSummary[] {
   const weeks: WeekSummary[] = [];
-  for (let w = 2; w <= 9; w++) {
-    const filename = `Week_0${w}_${name}.md`;
-    if (!allMissionFiles.includes(filename)) continue;
-    const filepath = path.join(missionsDir, filename);
+  for (let w = 1; w <= 9; w++) {
+    const filename = `Week_0${w}_${name}_submit.md`;
+    const filenameAlt = `Week_0${w}_${name}.md`;
+    const matchedFile = allMissionFiles.includes(filename) ? filename : allMissionFiles.includes(filenameAlt) ? filenameAlt : null;
+    if (!matchedFile) continue;
+    const filepath = path.join(missionsDir, matchedFile);
     try {
       const content = fs.readFileSync(filepath, 'utf8');
       if (content.length < 50) continue;

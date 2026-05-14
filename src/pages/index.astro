@@ -27,13 +27,16 @@ const iconMap: Record<string, string> = {
 
 const missionsDir = path.resolve('src/content/missions');
 const getMissionHtml = (week: number, name: string): string => {
-  const filename = `Week_0${week}_${name}.md`;
-  const filepath = path.join(missionsDir, filename);
-  try {
-    const content = fs.readFileSync(filepath, 'utf8');
-    const body = content.replace(/^---[\s\S]*?---\n?/, '');
-    return body.trim() ? (marked.parse(body.trim()) as string) : '';
-  } catch { return ''; }
+  const candidates = [`Week_0${week}_${name}_submit.md`, `Week_0${week}_${name}.md`];
+  for (const filename of candidates) {
+    const filepath = path.join(missionsDir, filename);
+    try {
+      const content = fs.readFileSync(filepath, 'utf8');
+      const body = content.replace(/^---[\s\S]*?---\n?/, '');
+      if (body.trim()) return marked.parse(body.trim()) as string;
+    } catch { /* 다음 후보 시도 */ }
+  }
+  return '';
 };
 
 // 최근 주차 미션 데이터
