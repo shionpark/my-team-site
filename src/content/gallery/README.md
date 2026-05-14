@@ -1,27 +1,35 @@
+# 01_gallery — 결과물 갤러리
+
+배포한 프로젝트·웹사이트·도구를 카드 형태로 모읍니다. 홈페이지 `/gallery/`에 **공개**됩니다.
+
+## 파일 형식
+
+```markdown
 ---
+name: 프로젝트 이름
+maker: 홍길동
+thumbnail: 🚀
+link: https://my-project.vercel.app
+week: 3
 tags:
-  - 갤러리
+  - 웹사이트
+  - Claude Code
 ---
 
-# 갤러리
-
-> 멤버들이 만든 제품, 배포된 웹사이트, 프로젝트를 모아놓는 곳입니다.
-> 누구나 자유롭게 추가해주세요!
-
-## 작품 목록
-
-| # | 제목 | 만든 사람 | 링크 | 설명 | 주차 |
-| --- | --- | --- | --- | --- | --- |
-| 1 | BRAND SHOW UP | 잽 | [바로가기](https://zap-arch.github.io/brand-showup/) | 원페이지 웹 제안서 | Week 02 |
-| 2 | 콘텐츠 마케팅 사이트 | 띵끄 | [바로가기](https://content-marketing-team.vercel.app/) | 원소스 멀티유즈 | Week 02 |
-| 3 | AI셀러가이드 | 오웬 | [@aisellerguide](https://instagram.com/aisellerguide) | 인스타 카드뉴스 자동화 | Week 02 |
-
----
-
-## 추가 방법
-
-아래 형식을 복사해서 테이블에 추가해주세요:
-
+프로젝트 상세 설명 (마크다운 본문).
 ```
-| N | 프로젝트명 | 닉네임 | [바로가기](URL) | 한줄 설명 | Week 0N |
-```
+
+## 필수 frontmatter 필드
+
+| 필드 | 타입 | 설명 |
+|------|------|------|
+| `name` | string | 서비스명 |
+| `maker` | string | 만든 사람 (닉네임) |
+| `thumbnail` | string | 이모지 또는 이미지 URL |
+| `link` | string | 배포 URL |
+| `week` | number | 관련 주차 |
+| `tags` | list | 태그 복수 |
+
+## 파일명
+
+자유 (예: `my-landing.md`, `ai-chatbot.md`). 특수문자만 금지.

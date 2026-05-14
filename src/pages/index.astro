@@ -38,16 +38,13 @@ const getMissionHtml = (week: number, name: string): string => {
 
 // 최근 주차 미션 데이터
 const latestWeek = {
-  week: 6,
-  title: '하네스와 오케스트레이션',
+  week: 1,
+  title: 'AI 파이프라인 설계',
   members: [
-    { name: '다다', cardTitle: '하네스 vs 오케스트레이션', summary: '개념 정리 + AAA 프로젝트에 두 레이어 적용 분석. "팀 운영의 맥도날드"가 되려는 시도.', link: '' },
-    { name: '비비안', cardTitle: '셀피쉬클럽 v4.0 작업 로그', summary: 'selfishclub-ax 레포 분리 + AAA 레포 자동 동기화 인프라 구축.', link: 'https://selfishclub-ax.vercel.app' },
-    { name: '띵끄', cardTitle: '하네스·오케스트레이션 적용 회고', summary: 'RLS 정책 사전 학습·환경변수·공식문서 = 하네스. OMC team 구조 = 오케스트레이션.', link: '' },
-    { name: '에밀리', cardTitle: '크루 테스트 D-day 알림톡 4종', summary: '취소 버튼·발송 직전 DB 조회·당일 리마인드 로직 완성.', link: '' },
-    { name: '오웬', cardTitle: '주방 비유로 푼 하네스 + OMC', summary: 'Claude Code = 주방, 커스텀 스킬 = 레시피북, OMC = 동료 요리사들. 컨설팅 클라이언트에 이식이 다음 목표.', link: '' },
-    { name: '다니', cardTitle: '하네스 엔지니어링 — 인간 병목 빼기', summary: '가시성·강제 게이트·자동 검증 3축으로 인간을 작업 흐름에서 빼는 철학.', link: '' },
-    { name: '흐민', cardTitle: 'Selforge에 하네스 적용', summary: '입력·도구·루프·재시작·외부세계 5요소로 하네스를 분해해 Selforge에 매핑.', link: '' },
+    { name: 'Alex', cardTitle: '팀 운영 자동화 슬래시 명령어', summary: 'Claude Code 슬래시 명령어 4개로 분석 리포트 + 멤버 프로필 + 현황표 자동 갱신. 30분 내 배포 구조 완성.', link: '' },
+    { name: 'Haru', cardTitle: 'AI 브랜딩 워크플로우', summary: 'Midjourney + Claude + Figma로 브랜드 아이덴티티 3단계 프로세스 설계. 5분 만에 시안 5개 확인.', link: '' },
+    { name: 'Jay', cardTitle: 'n8n 뉴스봇 + 카카오톡 발송', summary: 'RSS 수집 → Claude 요약 → 카카오톡 알림톡 파이프라인. 월 $2 이하 비용, 열람률 95%.', link: '' },
+    { name: 'Luna', cardTitle: 'GitHub PR 자동 코드 리뷰 봇', summary: 'GitHub Actions + Claude API로 보안·성능·스타일 자동 검증. 오탐률 60% 감소 달성.', link: '' },
   ]
 };
 ---

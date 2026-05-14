@@ -1,6 +1,6 @@
 #!/bin/bash
-VAULT="/Users/dada/PJ/AAA/selfish-aaa"
-SITE="/Users/dada/PJ/AAA/selfish-aaa-site-astro"
+VAULT="/Users/intalk/github/intalk-vault"
+SITE="/Users/intalk/github/my-team-site"
 CONTENT="$SITE/src/content"
 IMAGES="$SITE/public/images"
 
@@ -82,12 +82,12 @@ for mf in "$CONTENT/missions/"*.md; do
 done
 
 find "$VAULT/01_gallery/" -name "*.md" -exec cp {} "$CONTENT/gallery/" \; 2>/dev/null
-find "$VAULT/02_skill&insight/" -name "*.md" ! -name "README.md" -exec cp {} "$CONTENT/skills/" \; 2>/dev/null
+find "$VAULT/02_skill_insight/" -name "*.md" ! -name "README.md" -exec cp {} "$CONTENT/skills/" \; 2>/dev/null
 find "$VAULT/90_analysis/weekly/" -name "*.md" -exec cp {} "$CONTENT/analysis/" \; 2>/dev/null
 find "$VAULT/91_proposals/" -name "*.md" -exec cp {} "$CONTENT/proposals/" \; 2>/dev/null
 
 # 회의록 복사 (미션 페이지 피드백 콜아웃용)
 mkdir -p "$SITE/src/data/meetings"
-find "$VAULT/05_meetings/" -name "Week_*_weekly.md" -exec cp {} "$SITE/src/data/meetings/" \; 2>/dev/null
+find "$VAULT/01_meetings/" -name "Week_*_weekly.md" -exec cp {} "$SITE/src/data/meetings/" \; 2>/dev/null
 
 echo "동기화 완료: $(find "$CONTENT" -name '*.md' | wc -l)개 파일"

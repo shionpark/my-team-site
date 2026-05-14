@@ -74,6 +74,16 @@ const weeks = [
       { name: '오웬', cardTitle: '인스타그램 카드뉴스 완전 자동화', summary: 'crontab으로 매주 월/목 자동 실행. Claude API + Playwright + instagrapi.', detail: '온라인 셀러를 위한 AI 정보 계정 @aisellerguide를 운영하면서 카드뉴스 자동 제작 시스템을 구축했다. Claude API로 리서치 → HTML 템플릿 → Playwright PNG 변환 → instagrapi 자동 업로드 파이프라인을 만들었다. crontab으로 매주 월/목 12:38 자동 실행.', icon: 'photo_camera', link: '' },
     ]
   },
+  {
+    week: 1,
+    title: 'AI 파이프라인 설계',
+    members: [
+      { name: 'Alex', cardTitle: '팀 운영 자동화 슬래시 명령어', summary: 'Claude Code 슬래시 명령어 4개로 30분 내 배포 구조 완성.', detail: 'Claude Code 슬래시 명령어 4개를 만들어서 팀 운영을 자동화했다. 매주 회의 끝나고 /analyze 한 번이면 분석 리포트 + 멤버 프로필 + 현황표가 한꺼번에 갱신된다. 배포까지 30분 안에 끝나는 구조를 완성. 2-repo 구조에서 비공개 폴더가 공개 사이트로 넘어가는 것을 방지하기 위해 sync-content.sh에 화이트리스트 방식을 적용했다.', icon: 'terminal', link: '' },
+      { name: 'Haru', cardTitle: 'AI 브랜딩 워크플로우 설계', summary: 'Midjourney + Claude + Figma 3단계 프로세스. 5분 만에 시안 5개 확인.', detail: 'Midjourney로 로고 시안 5종 생성 → Claude로 브랜드 가이드라인 문서 자동 작성 → Figma에서 최종 편집하는 3단계 프로세스를 설계했다. 가상의 커피숍 브랜드 "모닝라운지"를 대상으로 실제 적용. AI 디자인 도구의 진짜 가치는 최종 결과물이 아니라 탐색 범위를 넓히는 것이라는 인사이트를 발견했다.', icon: 'palette', link: '' },
+      { name: 'Jay', cardTitle: 'n8n 뉴스봇 + 카카오톡 자동 발송', summary: 'RSS → Claude 요약 → 카카오톡 알림톡. 월 $2 이하, 열람률 95%.', detail: 'n8n 워크플로우로 매일 아침 AI 뉴스를 자동 수집해서 카카오톡 채널로 보내주는 봇을 만들었다. RSS 3개 소스에서 기사를 가져오고, Claude API로 한국어 3줄 요약을 생성한 뒤, 카카오톡 알림톡으로 발송하는 파이프라인. 기사 원문 대신 첫 500자만 넣어 비용을 5배 절감했다.', icon: 'rss_feed', link: '' },
+      { name: 'Luna', cardTitle: 'GitHub PR 자동 코드 리뷰 봇', summary: 'GitHub Actions + Claude API. 보안·성능·스타일 자동 검증, 오탐률 60% 감소.', detail: 'PR이 올라오면 자동으로 코드 리뷰를 해주는 봇을 만들었다. PR diff를 읽고 보안 취약점, 성능 이슈, 코드 스타일 위반을 잡아주는 시스템. 프롬프트에 "확실하지 않으면 지적하지 마라"를 넣는 것만으로 오탐률이 60% 감소. Cursor Rules와 Claude API 프롬프트를 통일하면 로컬 가이드 + PR 검증이 일관되게 동작한다.', icon: 'code', link: '' },
+    ]
+  },
 ];
 ---
 <Layout title="아카이브 - AAA 아카이브">
